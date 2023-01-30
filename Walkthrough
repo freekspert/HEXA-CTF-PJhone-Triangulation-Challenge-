@@ -1,0 +1,21 @@
+Walthrough of HEXA CTF phone triagulation challenge
+
+SO unfortuantely I dont have access to origional text for challenge at this point, however the essence was to find the neighbourhood for a phone that was part of an investigation that was within the CTF storyline
+
+information given was a dialing code 44, which is a UK international dialing code (intrinsic knowledge) and then a snipet of information that the carrier was EE (formally Orange), then a LAC and a Cell ID
+
+Googling cell phone triagulation sites found https://opencellid.org/ as the top site for this
+
+THis site allows you to plug in the data and provides a map reference for nearest cell towers to the site
+
+However it needed MCC and MCN codes, which were not within the information given, or was it!
+
+Another quick search found https://cellidfinder.com/mcc-mnc which shows both of these variables in a list by country and carrier
+
+Looking through you can find that EE (formally Orange) is listed as MCC = 234 and MNC = 33/34
+
+Plugging the varibales back into OpenCellid brings you to https://opencellid.org/#zoom=17&lat=51.487678&lon=-0.16981
+
+Highlighted in the middle of the map is the London neighbourhood of Chelsea
+
+therefore flag was HEXA{chelsea}
